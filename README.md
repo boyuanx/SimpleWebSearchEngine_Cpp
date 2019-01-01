@@ -152,7 +152,7 @@ A few comments are in order here: 1. The "actual" definition of PageRank is the 
 
 If you want to know how to compute the PageRank values iteratively, notice that
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=p%28v%2Ct%2B1%29%20%3D%20%281-%5Cepsilon%29%20%5Ccdot%20%5Csum_%7Bu%20%5Cto%20v%7D%20p%28u%2Ct%29%20%5Ccdot%20%5Cfrac%7B1%7D%7Bd%5E%2B_u%7D%20%2B%20%5Cepsilon%20%5Ccdot%201%2Fn.&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
+![equation](eqn.png)
 
 You can iterate over these (while being careful to use the values from the previous iteration until you have computed all the new values).
 
