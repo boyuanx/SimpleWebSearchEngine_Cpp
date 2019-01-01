@@ -8,7 +8,6 @@ This project will be to build a simple web search engine from scratch. At a high
 2. A program that parses the web pages to extract the relevant information, such as text, links, etc. You will do this here; not for HTML or another language (that would be a bit too much work), but for now just an extremely stripped-down version of Markdown.
 3. A program that has access to a local copy of all stored and parsed pages, and provides quick lookup of all the pages that contain the words of the query.
 4. A ranking algorithm that takes all results and puts them in an order of relevance to the given query.
-5. # 
 
 ## Specifications
 
