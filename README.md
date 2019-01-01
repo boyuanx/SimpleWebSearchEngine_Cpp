@@ -148,7 +148,11 @@ Different sources have slightly different definitions of PageRank, so to be spec
   2. With the remaining probability 1-ε, he follows an outgoing link (chosen uniformly at random) from his current node v. That is, for each directed edge (v,u) (including the self loop), he next goes to u with probability 1/d+(v).
 - He does this for t steps (see below). At this point, for each node v, there is a probaility p(v,t) that the random surfer is now at node v. This is the PageRank of node v.
 
-A few comments are in order here: 1. The "actual" definition of PageRank is the limit as t goes to infinity. But in practice, people (including Google) do exactly what we do here: stop after a small number of steps. 2. ε and t are two parameters of the system. These parameters should be set in your configuration file. Their names should be RESTART_PROBABILITY (which corresponds to ε) and STEP_NUMBER (which corresponds to t) (all-caps). Typically, the values that one would use are ε being roughly 0.15, and t somewhere around 20.
+A few comments are in order here: 
+
+1. The "actual" definition of PageRank is the limit as t goes to infinity. But in practice, people (including Google) do exactly what we do here: stop after a small number of steps. 
+
+2. ε and t are two parameters of the system. These parameters should be set in your configuration file. Their names should be RESTART_PROBABILITY (which corresponds to ε) and STEP_NUMBER (which corresponds to t) (all-caps). Typically, the values that one would use are ε being roughly 0.15, and t somewhere around 20.
 
 If you want to know how to compute the PageRank values iteratively, notice that
 
@@ -180,14 +184,8 @@ Before writing a single line of code, you should think carefully about what clas
 3. You will likely want a function that is devoted to parsing files and extracting all of the words and links (and storing them in `set` s).
 4. When you parse a file, you can create the set of outgoing links at that time. The set of incoming links may not be known yet, and should be added as you encounter them. A problem you may run into is, when you find an outgoing link, you may not have created the `WebPage` for that page yet, and so you will not be able to add this as an incoming link yet. How should you handle this? One possible solution would be to create all of the `WebPage`s upfront, and then start parsing.
 
-
-
 # Sources Cited
 
 “CSCI 104 - Spring 2018 Data Structures and Object Oriented Design.” *CSCI 104 – HW4*, bits.usc.edu/cs104/assignments/hw4.html.
 
 “CSCI 104 - Spring 2018 Data Structures and Object Oriented Design.” *CSCI 104 – HW4*, bits.usc.edu/cs104/assignments/hw6.html.
-
-
-
-
